@@ -1,0 +1,26 @@
+.daily-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  .daily-stats-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.45);
+    text-align: center;
+  }
+  .min-max-icons {
+    margin-right: 0.5rem;
+  }
+  .list-items:first-child {
+    width: 30%;
+  }
+  .list-items{
+      width: 21%;
+  }
+}

@@ -1,0 +1,68 @@
+.current-temp-container {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+  .cloud-icon {
+    flex-basis: 50%;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+  }
+  .current-temp {
+    flex: 1 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    .temp {
+      font-size: 5rem;
+      sup {
+        font-size: 1.5rem;
+        vertical-align: top;
+      }
+    }
+    .description {
+      font-size: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .current-temp-container{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+    .cloud-icon{
+      width: 80px;
+      height: 80px;
+     
+    }
+    .current-temp{
+      .temp{
+        font-size: 3rem;
+      }
+    }
+    
+  }
+}
+@media only screen and (max-width: 400px) {
+
+  .current-temp-container{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+    .cloud-icon{
+      width: 70px;
+      height: 70px;
+     
+    }
+    .current-temp{
+      .temp{
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+
+.weather-details{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    flex: 1;
+    
+
+}
+.current-details{
+    display: flex;
+    width: 100%;
+    flex-basis: 20%;
+    margin: 1rem 0;
+}
+
+@media only screen and (min-width: 992px) {
+    
+}
+@media only screen and (max-width: 768px) {
+    
+    .current-details{
+        display: block;
+            }
+  }
+

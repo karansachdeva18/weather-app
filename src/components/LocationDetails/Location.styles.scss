@@ -1,0 +1,30 @@
+.location-details {
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+  div {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .location-details {
+    h1 {
+      font-size: 1.5rem;
+    }
+    div {
+      font-size: 18px;
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .location-details {
+    h1 {
+      font-size: 1rem;
+    }
+    div {
+      font-size: 15px;
+    }
+  }
+}
