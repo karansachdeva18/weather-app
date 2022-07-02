@@ -35,7 +35,7 @@ const WeatherWidget = ({ location, units }) => {
     <>
       {Object.keys(weather).length > 0 && (
         <section className='weather-details'>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>} >
             <LocationDetails
               location={location.location}
               date={weather.current.dt}
@@ -50,8 +50,7 @@ const WeatherWidget = ({ location, units }) => {
             </section>
             <TodayDetails hourly={weather.hourly.slice(1, 25)} units={units} />
             <DailyStats daily={weather.daily} units={units} />
-
-          </Suspense>
+            </Suspense>
         </section>
       ) }
     </>
