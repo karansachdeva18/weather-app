@@ -1,7 +1,6 @@
-import React, { useMemo } from 'react'
-import useLocation from '../../hooks/useLocation';
+import React, { useMemo } from 'react';
 import { computeDate } from '../../utils/computeDate';
-import './Location.styles.scss'
+import './Location.styles.scss';
 
 const LocationDetails = ({location, date}) => {
     const showDate =  useMemo(()=>computeDate(date, true),[date])
