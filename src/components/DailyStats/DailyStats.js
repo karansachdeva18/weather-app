@@ -7,7 +7,7 @@ const DailyStats = ({ daily, units }) => {
   const renderDailyStats = () => {
     return daily.map((stats, index) => {
       const { dt, weather, temp:{min, max} } = stats;
-     return <DailyStatsList key={index} dt={dt} weather={weather} min={min} max={max} units={units} />
+     return <DailyStatsList key={`min_${index}`} dt={dt} weather={weather} min={min} max={max} units={units} />
     });
   };
   return (

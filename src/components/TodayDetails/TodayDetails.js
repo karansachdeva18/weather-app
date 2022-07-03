@@ -6,7 +6,7 @@ const TodayDetails = ({hourly, units}) => {
 
     const renderTodayDetails = ()=>{
         return hourly.map((hour, index) =>{
-            return <TempCard key={`hours${index}`} dt={hour.dt} temp={hour.temp} weather={hour.weather} units={units} />
+            return <TempCard key={`hours_${index}`} dt={hour.dt} temp={hour.temp} weather={hour.weather} units={units} />
         })
     }
     return (
