@@ -8,7 +8,7 @@ const DEFAULT_LOCATION = {
 }
 
 const useLocation = (locationName) => {
-    const [location, setLocation] = useState(DEFAULT_LOCATION);
+    const [location, setLocation] = useState({});
     
 const defaultLocation =  useCallback(() => {
     if (getLocalStorage("location")) {
@@ -21,7 +21,7 @@ const defaultLocation =  useCallback(() => {
         },
         (err) => {
           console.log(err);
-          //setLocation(DEFAULT_LOCATION)
+          setLocation(DEFAULT_LOCATION)
         }
       );
     }
