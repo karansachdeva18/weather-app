@@ -69,3 +69,22 @@
     }
   }
 }
+@media only screen and (max-width: 370px) {
+  .current-temp-container{
+    .cloud-icon{
+      width: 65px;
+      height: 65px;
+     
+    }
+    .current-temp{
+      .temp{
+        font-size: 1.8rem;
+      }
+      .description {
+        font-size: 16px;
+      }
+    }
+  }
+
+
+}

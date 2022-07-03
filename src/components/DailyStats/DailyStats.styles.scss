@@ -30,11 +30,23 @@
 
 @media only screen and (max-width: 400px) {
     h2{
-        font-size: 20px;
+        font-size: 18px;
     }
     .daily-stats{
         .weather-icon{
             font-size:20px
+        }
+    }
+
+
+  }
+  @media only screen and (max-width: 370px) {
+    h2{
+        font-size: 16px;
+    }
+    .daily-stats{
+        .weather-icon{
+            font-size:16px
         }
     }
 

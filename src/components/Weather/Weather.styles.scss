@@ -23,3 +23,9 @@
         padding: 1rem;
     }
   }
+  @media only screen and (max-width: 400px) {
+    .weather-container{
+        padding: 0.5rem;
+    }
+  
+  }
