@@ -1,31 +1,29 @@
-.toggle-switch{
-    display: flex;
-    button{
-        outline: none;
-        border: none;
-        background-color: transparent;
-        font-size: 25px;
-        cursor: pointer;
-        margin: 0 1rem;
-        &.active{
-            font-weight: 600;
-        }
-
+.toggle-switch {
+  display: flex;
+  width: 30%;
+  justify-content: flex-end;
+  button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    &.active {
+      font-weight: 600;
     }
-    
+  }
 }
 
 @media only screen and (max-width: 400px) {
-    .toggle-switch{
-        button{
-            font-size: 20px;
-            cursor: pointer;
-            margin: 0 0.5rem;
-            &.active{
-                font-weight: 500;
-            }
-    
-        }
-        
+  .toggle-switch {
+    button {
+      font-size: 20px;
+      cursor: pointer;
+      margin: 0 0.5rem;
+      &.active {
+        font-weight: 500;
+      }
     }
   }
+}

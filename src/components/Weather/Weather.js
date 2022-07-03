@@ -10,9 +10,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import React, { lazy, Suspense, useState } from "react";
 import { getLocalStorage } from "../../utils/localStorage";
-// import SearchLocation from "../SearchLocation/SearchLocation";
+import SearchLocation from "../SearchLocation/SearchLocation";
 import TemperatureUnits from "../TemperatureUnits/TemperatureUnits";
-// import WeatherWidget from "../Weather-widget/WeatherWidget";
+import WeatherWidget from "../Weather-widget/WeatherWidget";
 import "./Weather.styles.scss";
 library.add(
   faCloud,
@@ -23,25 +23,22 @@ library.add(
   faSnowflake,
   faSun
 );
-const SearchLocation = lazy(() => import("../SearchLocation/SearchLocation"));
 
 
-const WeatherWidget = lazy(() => import("../Weather-widget/WeatherWidget"));
+// const WeatherWidget = lazy(() => import("../Weather-widget/WeatherWidget"));
 
 const Weather = () => {
   const [units, setUnits] = useState(getLocalStorage("tempUnit") || "metric");
   const [currentLocation, setLocation] = useState("");
   return (
     <div className='weather-container'>
+
       <section className='header'>
-        <Suspense fallback={<div>Loading...</div>}>
-        <SearchLocation setLocation={setLocation} />
-        </Suspense>
+      <SearchLocation setLocation={setLocation} />
+
         <TemperatureUnits setUnits={setUnits} />
       </section>
-      <Suspense fallback={<div></div>}>
-        <WeatherWidget units={units} currentLocation={currentLocation} />
-      </Suspense>
+      <WeatherWidget units={units} currentLocation={currentLocation} />
     </div>
   );
 };
