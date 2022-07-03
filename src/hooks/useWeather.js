@@ -18,7 +18,7 @@ const useWeather = (currentLocation, units) => {
          Object.keys(location).length > 0 && weatherData()
       }, [location, units, weatherData])
     return{
-        weather
+        weather, location
     }
 }
 

@@ -1,40 +1,43 @@
-import React, { lazy, Suspense, useCallback, useEffect, useState } from "react";
-import { BASE_URL } from "../../constants/API";
-import useLocation from "../../hooks/useLocation";
+import React from "react";
 import useWeather from "../../hooks/useWeather";
-import HttpService from "../../services/http";
 import "./WeatherWidget.styles.scss";
+import LocationDetails from '../LocationDetails/LocationDetails';
+import TodayDetails from '../TodayDetails/TodayDetails';
+import DailyStats from '../DailyStats/DailyStats';
+import CurrentTemp from '../CurrentTemp/CurrentTemp';
+import CurrentStats from '../CurrentStats/CurrentStats';
 
-const LocationDetails = lazy(() =>
-  import("../LocationDetails/LocationDetails")
-);
-const TodayDetails = lazy(() => import("../TodayDetails/TodayDetails"));
-const DailyStats = lazy(() => import("../DailyStats/DailyStats"));
-const CurrentTemp = lazy(() => import("../CurrentTemp/CurrentTemp"));
-const CurrentStats = lazy(() => import("../CurrentStats/CurrentStats"));
+
+// const LocationDetails = lazy(() =>
+//   import("../LocationDetails/LocationDetails")
+// );
+// const TodayDetails = lazy(() => import("../TodayDetails/TodayDetails"));
+// const TodayDetails = lazy(() => import("../DailyStats/DailyStats"));
+// const CurrentTemp = lazy(() => import("../CurrentTemp/CurrentTemp"));
+// const CurrentStats = lazy(() => import("../CurrentStats/CurrentStats"));
 
 const WeatherWidget = ({ currentLocation, units }) => {
-  const {weather} = useWeather(currentLocation, units)
-
+  const {weather:{current, hourly, daily}, location:{location}} = useWeather(currentLocation, units)
   return (
     <>
-      {weather && Object.keys(weather).length > 0 && (
+      {current && Object.keys(current).length > 0 && (
         <section className='weather-details'>
-          <Suspense fallback={<div>Loading...</div>}>
-            <LocationDetails
-              date={weather.current.dt}
+          {/* <Suspense fallback={<div>Loading...</div>}> */}
+            <LocationDetails 
+            location={location}
+              date={current.dt}
             />
             <section className='current-details'>
               <CurrentTemp
-                temp={weather.current.temp}
-                weather={weather.current.weather}
+                temp={current.temp}
+                weather={current.weather}
                 units={units}
               />
-              <CurrentStats weather={weather.current} units={units} />
+              <CurrentStats weather={current} units={units} />
             </section>
-            <TodayDetails hourly={weather.hourly.slice(1, 25)} units={units} />
-            <DailyStats daily={weather.daily} units={units} />
-          </Suspense>
+            <TodayDetails hourly={hourly.slice(1, 25)} units={units} />
+            <DailyStats daily={daily} units={units} />
+          {/* </Suspense> */}
         </section>
       )}
     </>

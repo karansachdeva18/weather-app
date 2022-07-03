@@ -5,6 +5,7 @@ import { computeTemp } from '../../utils/temperature';
 import './CurrentTemp.styles.scss'
 
 const CurrentTemp = ({temp, weather, units}) => {
+    console.log(temp)
     return (
         <section className="current-temp-container">
             <FontAwesomeIcon icon={ICONS(weather[0].main)} className="cloud-icon" title={weather[0].description}/>
