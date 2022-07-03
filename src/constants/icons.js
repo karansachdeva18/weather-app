@@ -1,19 +1,23 @@
+import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCloud, faCloudBolt, faCloudShowersHeavy, faCloudSunRain, faSmog, faSnowflake, faSun } from "@fortawesome/free-solid-svg-icons";
+library.add(faCloud, faCloudBolt, faCloudShowersHeavy, faCloudSunRain, faSmog, faSnowflake, faSun);
 
-export const ICONS = {
-    Thunderstorm: faCloudBolt,
-    Drizzle:faCloudSunRain,
-    Rain:faCloudShowersHeavy,
-    Snow:faSnowflake,
-    Mist:faSmog,
-    Smoke:faSmog,
-    Haze:faSmog,
-    Dust:faSmog,
-    Fog:faSmog,
-    Sand:faSmog,
-    Ash:faSmog,
-    Squall:faSmog,
-    Tornado:faSmog,
-    Clear:faSun,
-    Clouds:faCloud
+const ICONS_COLLECTION = {
+    Thunderstorm: "cloud-bolt",
+    Drizzle:"cloud-sun-rain",
+    Rain:"cloud-showers-heavy",
+    Snow:"snowflake",
+    Mist:"smog",
+    Smoke:"smog",
+    Haze:"smog",
+    Dust:"smog",
+    Fog:"smog",
+    Sand:"smog",
+    Ash:"smog",
+    Squall:"smog",
+    Tornado:"smog",
+    Clear:"sun",
+    Clouds:"cloud"
 }
+
+export const ICONS = (icon) => ICONS_COLLECTION[icon]

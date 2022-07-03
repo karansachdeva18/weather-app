@@ -3,6 +3,7 @@ import { getLocalStorage, setLocalStorage } from '../../utils/localStorage';
 import './TemperatureUnits.styles.scss'
 
 const TemperatureUnits = ({setUnits}) => {
+
     const [tempUnit, setTempUnit] = useState(getLocalStorage("tempUnit") || "metric")
     const handleToggle = (unit) =>{
         setTempUnit(unit)
@@ -19,4 +20,4 @@ const TemperatureUnits = ({setUnits}) => {
     )
 }
 
-export default TemperatureUnits
+export default React.memo(TemperatureUnits)

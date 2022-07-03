@@ -8,7 +8,7 @@ const TempCard = ({dt, temp, weather, units}) => {
     return (
         <div className="temp-card">
             <div>{getTime(dt)}</div>
-            <FontAwesomeIcon icon={ICONS[weather[0].main]} title={weather[0].description} />
+            <FontAwesomeIcon icon={ICONS(weather[0].main)} title={weather[0].description} />
             <div>{computeTemp(temp)} <sup>o</sup>{units === 'metric' ? "C" : "F"}</div>
         </div>
     )

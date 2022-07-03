@@ -3,6 +3,7 @@ import TempCard from './TempCard';
 import './TodayDetails.styles.scss';
 
 const TodayDetails = ({hourly, units}) => {
+
     const renderTodayDetails = ()=>{
         return hourly.map((hour, index) =>{
             return <TempCard key={`hours${index}`} dt={hour.dt} temp={hour.temp} weather={hour.weather} units={units} />
