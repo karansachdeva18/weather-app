@@ -20,7 +20,7 @@ const DailyStatsList = ({dt, weather, min, max, units }) => {
                 <FontAwesomeIcon
                   icon={ICONS(weather[0].main)}
                   title={weather[0].description}
-                  size={'2x'}
+                  className="weather-icon"
                 />
               </div>
               <div className='list-items'>
