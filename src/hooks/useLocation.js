@@ -4,7 +4,7 @@ import HttpService from "../services/http";
 import { getLocalStorage, setLocalStorage } from "../utils/localStorage";
 
 const DEFAULT_LOCATION = {
-  location: "Delhi, India",
+  location: "New Delhi, India",
   lat: 28.7040592,
   lon: 77.10249019999999,
 };
@@ -22,7 +22,6 @@ const useLocation = (locationName) => {
             position.coords.latitude,
             position.coords.longitude
           );
-          setLocation(res);
         },
         (err) => {
           console.log(err);
@@ -62,7 +61,9 @@ const useLocation = (locationName) => {
           location: { lat, lng: lon },
         },
       } = res;
+      console.log(res)
       const location = { location: formatted_address, lat, lon };
+      console.log(location)
       setLocalStorage("location", location);
       setLocation(location);
     },
