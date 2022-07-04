@@ -14,8 +14,8 @@
     background-color: rgba(0, 0, 0, 0.45);
     text-align: center;
   }
-  .weather-icon{
-      font-size:30px
+  .weather-icon {
+    font-size: 30px;
   }
   .min-max-icons {
     margin-right: 0.5rem;
@@ -23,32 +23,28 @@
   .list-items:first-child {
     width: 30%;
   }
-  .list-items{
-      width: 21%;
+  .list-items {
+    width: 21%;
   }
 }
 
 @media only screen and (max-width: 400px) {
-    h2{
-        font-size: 18px;
-    }
-    .daily-stats{
-        .weather-icon{
-            font-size:20px
-        }
-    }
-
-
+  h2 {
+    font-size: 18px;
   }
-  @media only screen and (max-width: 370px) {
-    h2{
-        font-size: 16px;
+  .daily-stats {
+    .weather-icon {
+      font-size: 20px;
     }
-    .daily-stats{
-        .weather-icon{
-            font-size:16px
-        }
-    }
-
-
   }
+}
+@media only screen and (max-width: 370px) {
+  h2 {
+    font-size: 15px;
+  }
+  .daily-stats {
+    .weather-icon {
+      font-size: 16px;
+    }
+  }
+}
