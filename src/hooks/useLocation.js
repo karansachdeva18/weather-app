@@ -33,7 +33,7 @@ const useLocation = (locationName) => {
   const fetchLocation = useCallback(
     async (searchLocation) => {
       let res = await HttpService.get(
-        `${GEOLOCATION_BASE_URL}?address=${searchLocation}&sensor=true&key=${process.env.REACT_APP_GOOGLE_API_KEY}`
+        `${GEOLOCATION_BASE_URL}?address=${searchLocation}&sensor=true&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
       );
       res = res.results[0];
       const {
@@ -52,7 +52,7 @@ const useLocation = (locationName) => {
   const fetchLocationByLatLng = useCallback(
     async (latitude, longitute) => {
       let res = await HttpService.get(
-        `${GEOLOCATION_BASE_URL}?latlng=${latitude},${longitute}&result_type=locality&key=${process.env.REACT_APP_GOOGLE_API_KEY}`
+        `${GEOLOCATION_BASE_URL}?latlng=${latitude},${longitute}&result_type=locality&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
       );
       res = res.results[0];
       const {

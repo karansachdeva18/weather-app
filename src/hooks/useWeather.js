@@ -9,7 +9,7 @@ const useWeather = (currentLocation, units) => {
 
   const weatherData = useCallback(async () => {
     const response = await HttpService.get(
-      `${BASE_URL}/onecall?lat=${location.lat}&lon=${location.lon}&units=${units}&exclude=minutely,alerts&appid=${process.env.REACT_APP_API_KEY}`
+      `${BASE_URL}/onecall?lat=${location.lat}&lon=${location.lon}&units=${units}&exclude=minutely,alerts&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`
     );
     setWeather(response);
   }, [location, units]);
