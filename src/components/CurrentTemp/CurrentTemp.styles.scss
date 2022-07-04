@@ -30,37 +30,35 @@
 }
 
 @media only screen and (max-width: 768px) {
-
-  .current-temp-container{
+  .current-temp-container {
     width: 100%;
     margin: 0;
     margin-bottom: 1rem;
-    .cloud-icon{
+    .cloud-icon {
       width: 80px;
       height: 80px;
-     
     }
-    .current-temp{
-      .temp{
+    .current-temp {
+      .temp {
         font-size: 3rem;
+        sup {
+          font-size: 1rem;
+        }
       }
     }
-    
   }
 }
 @media only screen and (max-width: 400px) {
-
-  .current-temp-container{
+  .current-temp-container {
     width: 100%;
     margin: 0;
     margin-bottom: 1rem;
-    .cloud-icon{
+    .cloud-icon {
       width: 70px;
       height: 70px;
-     
     }
-    .current-temp{
-      .temp{
+    .current-temp {
+      .temp {
         font-size: 2rem;
       }
       .description {
@@ -70,14 +68,13 @@
   }
 }
 @media only screen and (max-width: 370px) {
-  .current-temp-container{
-    .cloud-icon{
+  .current-temp-container {
+    .cloud-icon {
       width: 65px;
       height: 65px;
-     
     }
-    .current-temp{
-      .temp{
+    .current-temp {
+      .temp {
         font-size: 1.8rem;
       }
       .description {
@@ -85,6 +82,4 @@
       }
     }
   }
-
-
 }
