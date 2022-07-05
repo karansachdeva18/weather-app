@@ -5,10 +5,14 @@
 **Weather App** is a simple app developed in Javascript using React, HTML and SASS. The app allows you to see the weather from your current location or another location using **Google Maps Api** and **OpenWeather Api**. Using **One Call API** from **OpenWeather Api** to displays the current weather, 24 hours and 8 days forecast. You can change the unit system from metric to imperial.
 
 #### App Layout
+<img src="https://github.com/karansachdeva18/weather-app/screenshots/App_Views.png" Width="1620" />
 
-#### Lighthouse Mobile performance
+#### PageSpeed Insights Mobile performance
+<img src="https://github.com/karansachdeva18/weather-app/screenshots/Mobile_Performance.png" Width="1620" />
 
-#### Lighthouse Desktop performance
+#### PageSpeed Insights Desktop performance
+<img src="https://github.com/karansachdeva18/weather-app/screenshots/Desktop_Perfomance.png" Width="1620" />
+
 
 ## Libraries Used
 
