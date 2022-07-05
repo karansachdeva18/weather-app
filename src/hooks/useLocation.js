@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { GEOLOCATION_BASE_URL } from "../constants/API";
 import HttpService from "../services/http";
 import { getLocalStorage, setLocalStorage } from "../utils/localStorage";
@@ -18,7 +18,7 @@ const useLocation = (locationName) => {
     } else if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         async (position) => {
-          let res = await fetchLocationByLatLng(
+          await fetchLocationByLatLng(
             position.coords.latitude,
             position.coords.longitude
           );
@@ -29,7 +29,7 @@ const useLocation = (locationName) => {
         }
       );
     }
-  }, [locationName]);
+  }, []);
   const fetchLocation = useCallback(
     async (searchLocation) => {
       let res = await HttpService.get(
@@ -46,7 +46,7 @@ const useLocation = (locationName) => {
       setLocalStorage("location", location);
       setLocation(location);
     },
-    [locationName]
+    []
   );
 
   const fetchLocationByLatLng = useCallback(
@@ -67,7 +67,7 @@ const useLocation = (locationName) => {
       setLocalStorage("location", location);
       setLocation(location);
     },
-    [locationName]
+    []
   );
 
   useEffect(() => {
