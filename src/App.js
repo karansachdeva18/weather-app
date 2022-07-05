@@ -1,6 +1,6 @@
-import './App.scss';
-import ErrorBoundary from './components/Common/ErrorBoundary';
-import Weather from './components/Weather/Weather';
+import "./App.scss";
+import ErrorBoundary from "./components/Common/ErrorBoundary";
+import Weather from "./components/Weather/Weather";
 
 function App() {
   return (

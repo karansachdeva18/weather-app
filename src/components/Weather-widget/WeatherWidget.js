@@ -7,7 +7,6 @@ import "./WeatherWidget.styles.scss";
 // import CurrentTemp from '../CurrentTemp/CurrentTemp';
 // import CurrentStats from '../CurrentStats/CurrentStats';
 
-
 const LocationDetails = lazy(() =>
   import("../LocationDetails/LocationDetails")
 );
@@ -17,17 +16,17 @@ const CurrentTemp = lazy(() => import("../CurrentTemp/CurrentTemp"));
 const CurrentStats = lazy(() => import("../CurrentStats/CurrentStats"));
 
 const WeatherWidget = ({ currentLocation, units }) => {
-  const {weather:{current, hourly, daily}, location:{location}} = useWeather(currentLocation, units)
+  const {
+    weather: { current, hourly, daily },
+    location: { location },
+  } = useWeather(currentLocation, units);
   return (
     <>
       {current && Object.keys(current).length > 0 && (
-        <section className='weather-details'>
+        <section className="weather-details">
           <Suspense fallback={<div>Loading...</div>}>
-            <LocationDetails 
-            location={location}
-              date={current.dt}
-            />
-            <section className='current-details'>
+            <LocationDetails location={location} date={current.dt} />
+            <section className="current-details">
               <CurrentTemp
                 temp={current.temp}
                 weather={current.weather}

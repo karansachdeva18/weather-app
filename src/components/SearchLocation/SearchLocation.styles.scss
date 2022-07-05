@@ -1,47 +1,43 @@
-
-form{
-    flex:1
+form {
+  flex: 1;
 }
-input, button{
-    outline: none;
-    border: none;
-    padding: 0.5rem;
-    background: transparent;
+input,
+button {
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  background: transparent;
+  color: white;
+  border-bottom: 2px solid;
+  font-size: 20px;
+  &::placeholder {
     color: white;
-    border-bottom: 2px solid;
-    font-size: 20px;
-    &::placeholder{
-        color:white
-    }
-
+  }
 }
-input{
-    width: 50%;
+input {
+  width: 50%;
 }
 
 @media only screen and (max-width: 768px) {
-    
-    input{
-        width: 80%;
-        
-    }
+  input {
+    width: 80%;
   }
-  @media only screen and (max-width: 400px) {
-    
-    input{
-        width: 60%;
-    }
-    input, button{
-        font-size: 15px;
-        padding: 0.25rem;
-        border-bottom: 1px solid;
-    }
+}
+@media only screen and (max-width: 400px) {
+  input {
+    width: 60%;
   }
-  @media only screen and (max-width: 370px) {
-
-    input, button{
-        font-size: 14px;
-        padding: 0.225rem;
-    }
-  
+  input,
+  button {
+    font-size: 15px;
+    padding: 0.25rem;
+    border-bottom: 1px solid;
   }
+}
+@media only screen and (max-width: 370px) {
+  input,
+  button {
+    font-size: 14px;
+    padding: 0.225rem;
+  }
+}

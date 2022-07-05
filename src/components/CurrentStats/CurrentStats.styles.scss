@@ -1,21 +1,20 @@
-.current-stats-container{
-    flex: 1;
-    border-left: 2px solid;
-    margin: 0 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    div{
-        width: 30%;
-        text-align: center;
-    }
+.current-stats-container {
+  flex: 1;
+  border-left: 2px solid;
+  margin: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  div {
+    width: 30%;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-
-    .current-stats-container{
-        border: none;
-        border-top: 1px solid;
-        margin: 0;
-        justify-content: space-evenly;
-    }
+  .current-stats-container {
+    border: none;
+    border-top: 1px solid;
+    margin: 0;
+    justify-content: space-evenly;
   }
+}

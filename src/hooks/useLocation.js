@@ -30,45 +30,39 @@ const useLocation = (locationName) => {
       );
     }
   }, []);
-  const fetchLocation = useCallback(
-    async (searchLocation) => {
-      let res = await HttpService.get(
-        `${GEOLOCATION_BASE_URL}?address=${searchLocation}&sensor=true&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
-      );
-      res = res.results[0];
-      const {
-        formatted_address,
-        geometry: {
-          location: { lat, lng: lon },
-        },
-      } = res;
-      const location = { location: formatted_address, lat, lon };
-      setLocalStorage("location", location);
-      setLocation(location);
-    },
-    []
-  );
+  const fetchLocation = useCallback(async (searchLocation) => {
+    let res = await HttpService.get(
+      `${GEOLOCATION_BASE_URL}?address=${searchLocation}&sensor=true&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
+    );
+    res = res.results[0];
+    const {
+      formatted_address,
+      geometry: {
+        location: { lat, lng: lon },
+      },
+    } = res;
+    const location = { location: formatted_address, lat, lon };
+    setLocalStorage("location", location);
+    setLocation(location);
+  }, []);
 
-  const fetchLocationByLatLng = useCallback(
-    async (latitude, longitute) => {
-      let res = await HttpService.get(
-        `${GEOLOCATION_BASE_URL}?latlng=${latitude},${longitute}&result_type=locality&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
-      );
-      res = res.results[0];
-      const {
-        formatted_address,
-        geometry: {
-          location: { lat, lng: lon },
-        },
-      } = res;
-      console.log(res)
-      const location = { location: formatted_address, lat, lon };
-      console.log(location)
-      setLocalStorage("location", location);
-      setLocation(location);
-    },
-    []
-  );
+  const fetchLocationByLatLng = useCallback(async (latitude, longitute) => {
+    let res = await HttpService.get(
+      `${GEOLOCATION_BASE_URL}?latlng=${latitude},${longitute}&result_type=locality&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
+    );
+    res = res.results[0];
+    const {
+      formatted_address,
+      geometry: {
+        location: { lat, lng: lon },
+      },
+    } = res;
+    console.log(res);
+    const location = { location: formatted_address, lat, lon };
+    console.log(location);
+    setLocalStorage("location", location);
+    setLocation(location);
+  }, []);
 
   useEffect(() => {
     locationName ? fetchLocation(locationName) : defaultLocation();
