@@ -29,7 +29,7 @@
 }
 
 @media only screen and (max-width: 400px) {
-  h2 {
+  .daily-stats-header {
     font-size: 18px;
   }
   .daily-stats {
@@ -39,7 +39,7 @@
   }
 }
 @media only screen and (max-width: 370px) {
-  h2 {
+  .daily-stats-header {
     font-size: 14px;
   }
   .daily-stats {
