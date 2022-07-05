@@ -11,7 +11,7 @@
 <img src="https://github.com/karansachdeva18/weather-app/blob/main/screenshots/Mobile_Performance.png" Width="1620" />
 
 #### PageSpeed Insights Desktop performance
-<img src="https://github.com/karansachdeva18/weather-app/blob/main/screenshots/Desktop_Perfomance.png" Width="1620" />
+<img src="https://github.com/karansachdeva18/weather-app/blob/main/screenshots/Desktop_Performance.png" Width="1620" />
 
 
 ## Libraries Used
