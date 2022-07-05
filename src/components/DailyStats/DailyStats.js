@@ -24,7 +24,7 @@ const DailyStats = ({ daily, units }) => {
   };
   return (
     <>
-      <h2>Next 8 Days Weather</h2>
+      <h2 className="daily-stats-header">Next 8 Days Weather</h2>
       <ul className="daily-stats">{renderDailyStats()}</ul>
     </>
   );
