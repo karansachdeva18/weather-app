@@ -16,9 +16,9 @@
 
 ## Libraries Used
 
-- [React](https://github.com/facebook/react)
-- [Axios](https://github.com/axios/axios) (API Calls)
-- [Font Awesome](https://github.com/FortAwesome/Font-Awesome) (Icons)
+- [React](https://reactjs.org/)
+- [Axios](https://axios-http.com/) (API Calls)
+- [Font Awesome](https://fontawesome.com/) (Icons)
 
 ## Setup
 
