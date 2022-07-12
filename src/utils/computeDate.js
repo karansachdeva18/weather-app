@@ -14,7 +14,7 @@ export const computeDate = (dt, fulldt = false) => {
   } else {
     let date = new Date(dt * 1000);
     return {
-      date: `${date.getDate()}/${date.getMonth()}`,
+      date: `${date.getDate()}/${date.getMonth()+1}`,
       day: DAYS[date.getDay()],
     };
   }
